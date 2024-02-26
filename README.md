@@ -1,25 +1,12 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Data Structure & Algorithms in Java
 
 This repo contains code files of DSA learnings
 
-## Index
+## Index 
+
 ### Linear Search 
 [ 1) Find first occurrence of an element in given array](#1)
-
 
 [ 2) Find multiple occurrences of an element in given array](#2)
 
@@ -64,6 +51,8 @@ public class LinearSearch1 {
     }
 }
 ```
+[Back to top](#Index)
+
 ### 2
 ## Find multiple occurrences of an element in given array
 ```java
