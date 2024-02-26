@@ -65,7 +65,7 @@ public class LinearSearch1 {
 }
 ```
 ### 2
-##
+## Find multiple occurrences of an element in given array
 ```java
 // 2) Find multiple occurrences of an element in given array
 
