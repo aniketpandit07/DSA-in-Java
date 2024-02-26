@@ -87,6 +87,8 @@ public class LinearSearch2 {
 
 }
 ```
+[Back to top](#Index)
+
 ### 3
 ## Find maximum in given array
 
@@ -114,6 +116,8 @@ public static  void findMax(int arr[]){
     }
 }
 ```
+[Back to top](#Index)
+
 ### 4
 ## Find minimum in given array
 ```java 
@@ -141,6 +145,8 @@ public static void findMinimum(int arr[]){
 
 }
 ```
+[Back to top](#Index)
+
 ## Author
 
 - [@aniketpandit07](https://www.github.com/aniketpandit07)
