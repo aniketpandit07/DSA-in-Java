@@ -23,9 +23,9 @@ This repo contains code files of DSA learnings
 
 [ 2) Find multiple occurrences of an element in given array](#2)
 
-[ 3) Find maximum in given array](https://github.com/aniketpandit07/DSA-in-Java/blob/main/LinearSearch3.java)
+[ 3) Find maximum in given array](#3)
 
-[ 4) Find minimum in given array](https://github.com/aniketpandit07/DSA-in-Java/blob/main/LinearSearch4.java)
+[ 4) Find minimum in given array](#4)
 
 
 ## Code
@@ -98,7 +98,60 @@ public class LinearSearch2 {
 
 }
 ```
+### 3
+## Find maximum in given array
 
+```java
+// 3) Find maximum in given array
+
+public class LinearSearch3 {
+
+    public static void main(String[] args) {
+    int arr[]={2,3,6,3,2,24,7,9,54,44,444,22,23,55,65,44,33,3};
+
+    findMax(arr);
+      
+    }
+
+public static  void findMax(int arr[]){
+//        int maxx = Integer.MIN_VALUE; //this is another method to calculate max. just compare element with min value
+        int max= arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if(max<arr[i]){
+                max =arr[i];
+            }
+        }
+        System.out.println("maximum is "+max);
+    }
+}
+```
+### 4
+## Find minimum in given array
+```java 
+// 4) Find minimum in given array
+
+public class LinearSearch4 {
+
+    public static void main(String[] args) {
+    int arr[]={2,3,6,3,2,24,7,9,54,44,444,22,23,55,65,44,33,3};
+
+       findMinimum(arr);
+    }
+
+public static void findMinimum(int arr[]){
+//        int minn = Integer.MAX_VALUE;
+        int min = arr[0];
+        for(int i =0; i<arr.length; i++){
+            if(arr[i]<min){
+                min=arr[i];
+            }
+        }
+        System.out.println("Minimum is "+min);
+    }
+
+
+}
+```
 ## Author
 
 - [@aniketpandit07](https://www.github.com/aniketpandit07)
