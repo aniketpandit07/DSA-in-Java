@@ -147,6 +147,48 @@ public static void findMinimum(int arr[]){
 ```
 [Back to top](#Index)
 
+## accordion
+<details>
+<summary>1) Find target element in non decreasing Array</summary>
+
+```java
+public class BinarySearch1 {
+    public static void main(String[] args) {
+        //non-decreasing order
+        int arr[] ={2,4,8,9,23,56,77,85};
+        binarySearch(arr,56);
+
+    }
+
+public static void binarySearch(int arr[], int target){
+        int ans =-1;
+        int start = 0;
+        int end = arr.length-1;
+
+
+        while(start<=end){
+            int mid = start + (end-start)/2;
+            if(arr[mid]==target){
+                ans = mid;
+                break;
+            } else if (arr[mid]<target) {
+                start = mid+1;
+            }else{
+                end = mid-1;
+            }
+        }
+        if(ans ==-1){
+            System.out.println("element not found");
+        }
+        else{
+            System.out.println(target+" found at index "+ans);
+        }
+    }
+}
+```
+
+</details>
+
 ## Author
 
 - [@aniketpandit07](https://www.github.com/aniketpandit07)
@@ -155,5 +197,6 @@ public static void findMinimum(int arr[]){
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://aniketpandit07.github.io/portfolio-hub/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aniket-pandit-7b1951201/)
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/aniketpandit07)
+
 
 
