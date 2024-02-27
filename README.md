@@ -5,15 +5,15 @@ This repo contains code files of DSA learnings
 
 ### Index 
 
-[<h3>Linear Search</h3>](#linear-search)
+[Linear Search](#linear-search)
 
-[<h3>Binary Search</h3>](#Binary-Search)
+[Binary Search](#binary-search)
 
 
 ## Code
 
 ### accordion
-### Linear Search
+## Linear Search
 <!-- 1 -->
 <details>
 <summary>1)Find first occurrence of an element in given array</summary>
@@ -149,7 +149,7 @@ public static void findMinimum(int arr[]){
 ```
 </details>
 
-### Binary-Search
+## Binary Search
 <!-- 1 -->
 <details>
 <summary>1) Find target element in non decreasing Array</summary>
@@ -192,23 +192,76 @@ public static void binarySearch(int arr[], int target){
 ```
 </details>
 
-
-
+<!-- 2 -->
 <details>
-<summary></summary>
+<summary>2) Find target element in non increasing Array</summary>
 
 ```java
 //code
+public class BinarySearch1 {
+    public static void main(String[] args) {
+        //non-decreasing order
+        int arr[]={22,20,16,15,15,12,10,6,2,1,1};
+        binarySearchDesc(arr,56);
 
+    }
+
+public static void binarySearchDesc(int arr[], int target){
+        int ans =-1;
+        int start = 0;
+        int end = arr.length-1;
+
+
+        while(start<=end){
+            int mid = start + (end-start)/2;
+            if(arr[mid]==target){
+                ans = mid;
+                break;
+            } else if (arr[mid]<target) {
+                end = mid - 1;
+            }else{
+               start = mid +1;
+            }
+        }
+        if(ans ==-1){
+            System.out.println("element not found");
+        }
+        else{
+            System.out.println(target+" found at index "+ans);
+        }
+    }
+}
 ```
 </details>
 
+<!-- 3 -->
 <details>
-<summary></summary>
+<summary>3) find target in order Agnostics Array </summary>
 
 ```java
 //code
+//order agnostics means we don’t know the order is incresing or decresing
+public class BinarySearch1 {
+    public static void main(String[] args) {
+        //non-decreasing order
+        int arr[] ={2,4,8,9,23,56,77,85};
+				int arr2[]={22,20,16,15,15,12,10,6,2,1,1};
 
+        binarySearchOrderAgnostic(arr, 23);
+        binarySearchOrderAgnostic(arr2, 10);
+
+    }
+public static void binarySearchOrderAgnostic (int arr[], int target ){
+        int start = 0;
+        int end = arr.length -1;
+        if(arr[start]<=arr[end]){
+            binarySearch(arr, target);
+        }
+        else{
+            binarySearchDesc(arr, target);
+        }
+    }
+}
 ```
 </details>
 
