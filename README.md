@@ -18,134 +18,8 @@ This repo contains code files of DSA learnings
 ## Code
 
 ### 1
-## Find first occurrence of an element in given array
-
-
-```java
-// 1) Find first occurrence of an element in given array
-
-public class LinearSearch1 {
-
-    public static void main(String[] args) {
-    int arr[]={2,3,6,3,2,24,7,9,54,44,444,22,23,55,65,44,33,3};
-      linearSearch(arr, 3);
-
-    }
-
-
-
-    public static void linearSearch(int arr[], int target){
-        int ans =-1;
-        for (int i =0; i<arr.length;i++){
-            if(arr[i]==target){
-                ans =i;
-                break;
-        }
-    }
-        if(ans == -1){
-            System.out.println("Element not found");
-        }else{
-
-        System.out.println("found element at pos "+ans);
-        }
-    }
-}
-```
 [Back to top](#Index)
 
-### 2
-## Find multiple occurrences of an element in given array
-```java
-// 2) Find multiple occurrences of an element in given array
-
-
-public class LinearSearch2 {
-
-    public static void main(String[] args) {
-    int arr[]={2,3,6,3,2,24,7,9,54,44,444,22,23,55,65,44,33,3};
-     
-		 linearSearchMultiple(arr,3);
-    }
-
- public static void linearSearchMultiple(int arr[], int target){
-
-        int ans[]= new int[arr.length];
-        int k =0;
-        for (int i =0; i<arr.length;i++){
-            if(arr[i]==target){
-                ans[k] =i;
-                k++;
-            }
-        }
-        if(k == 0){
-            System.out.println("Element not found");
-        }else{
-            for(int i= 0; i<k; i++)
-            System.out.println("found element at pos "+ans[i]);
-        }
-    }
-
-}
-```
-[Back to top](#Index)
-
-### 3
-## Find maximum in given array
-
-```java
-// 3) Find maximum in given array
-
-public class LinearSearch3 {
-
-    public static void main(String[] args) {
-    int arr[]={2,3,6,3,2,24,7,9,54,44,444,22,23,55,65,44,33,3};
-
-    findMax(arr);
-      
-    }
-
-public static  void findMax(int arr[]){
-//        int maxx = Integer.MIN_VALUE; //this is another method to calculate max. just compare element with min value
-        int max= arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            if(max<arr[i]){
-                max =arr[i];
-            }
-        }
-        System.out.println("maximum is "+max);
-    }
-}
-```
-[Back to top](#Index)
-
-### 4
-## Find minimum in given array
-```java 
-// 4) Find minimum in given array
-
-public class LinearSearch4 {
-
-    public static void main(String[] args) {
-    int arr[]={2,3,6,3,2,24,7,9,54,44,444,22,23,55,65,44,33,3};
-
-       findMinimum(arr);
-    }
-
-public static void findMinimum(int arr[]){
-//        int minn = Integer.MAX_VALUE;
-        int min = arr[0];
-        for(int i =0; i<arr.length; i++){
-            if(arr[i]<min){
-                min=arr[i];
-            }
-        }
-        System.out.println("Minimum is "+min);
-    }
-
-
-}
-```
-[Back to top](#Index)
 
 ## accordion
 <details>
@@ -185,6 +59,157 @@ public static void binarySearch(int arr[], int target){
         }
     }
 }
+```
+</details>
+
+<details>
+<summary>1)Find first occurrence of an element in given array</summary>
+
+```java
+public class LinearSearch {
+
+    public static void main(String[] args) {
+    int arr[]={2,3,6,3,2,24,7,9,54,44,444,22,23,55,65,44,33,3};
+      linearSearch(arr, 3);
+
+    }
+
+
+
+    public static void linearSearch(int arr[], int target){
+        int ans =-1;
+        for (int i =0; i<arr.length;i++){
+            if(arr[i]==target){
+                ans =i;
+                break;
+        }
+    }
+        if(ans == -1){
+            System.out.println("Element not found");
+        }else{
+
+        System.out.println("found element at pos "+ans);
+        }
+    }
+}
+```
+</details>
+
+<details>
+<summary>2) Find multiple occurrences of an element in given array</summary>
+
+```java
+//code
+// 2) Find multiple occurrences of an element in given array
+public class LinearSearch2 {
+
+    public static void main(String[] args) {
+    int arr[]={2,3,6,3,2,24,7,9,54,44,444,22,23,55,65,44,33,3};
+     
+		 linearSearchMultiple(arr,3);
+    }
+
+ public static void linearSearchMultiple(int arr[], int target){
+
+        int ans[]= new int[arr.length];
+        int k =0;
+        for (int i =0; i<arr.length;i++){
+            if(arr[i]==target){
+                ans[k] =i;
+                k++;
+            }
+        }
+        if(k == 0){
+            System.out.println("Element not found");
+        }else{
+            for(int i= 0; i<k; i++)
+            System.out.println("found element at pos "+ans[i]);
+        }
+    }
+
+}
+
+```
+</details>
+
+<details>
+<summary>3) Find maximum in given array</summary>
+
+```java
+//code// 3) Find maximum in given array
+
+public class LinearSearch3 {
+
+    public static void main(String[] args) {
+    int arr[]={2,3,6,3,2,24,7,9,54,44,444,22,23,55,65,44,33,3};
+
+    findMax(arr);
+      
+    }
+
+public static  void findMax(int arr[]){
+//        int maxx = Integer.MIN_VALUE; //this is another method to calculate max. just compare element with min value
+        int max= arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if(max<arr[i]){
+                max =arr[i];
+            }
+        }
+        System.out.println("maximum is "+max);
+    }
+}
+```
+</details>
+
+<details>
+<summary>4) Find minimum in given array</summary>
+
+```java
+//code
+// 4) Find minimum in given array
+
+public class LinearSearch4 {
+
+    public static void main(String[] args) {
+    int arr[]={2,3,6,3,2,24,7,9,54,44,444,22,23,55,65,44,33,3};
+
+       findMinimum(arr);
+    }
+
+public static void findMinimum(int arr[]){
+//        int minn = Integer.MAX_VALUE;
+        int min = arr[0];
+        for(int i =0; i<arr.length; i++){
+            if(arr[i]<min){
+                min=arr[i];
+            }
+        }
+        System.out.println("Minimum is "+min);
+    }
+
+
+}
+
+```
+
+</details>
+
+<details>
+<summary></summary>
+
+```java
+//code
+
+```
+
+</details>
+
+<details>
+<summary></summary>
+
+```java
+//code
+
 ```
 
 </details>
