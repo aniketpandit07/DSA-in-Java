@@ -5,63 +5,16 @@ This repo contains code files of DSA learnings
 
 ## Index 
 
-### Linear Search 
-[ 1) Find first occurrence of an element in given array](#1)
+[<h2>Linear Search</h2>](#linear-search)
 
-[ 2) Find multiple occurrences of an element in given array](#2)
-
-[ 3) Find maximum in given array](#3)
-
-[ 4) Find minimum in given array](#4)
+[<h2>Binary Search</h2>](#binary-search)
 
 
 ## Code
 
-### 1
-[Back to top](#Index)
-
-
-## accordion
-<details>
-<summary>1) Find target element in non decreasing Array</summary>
-
-```java
-public class BinarySearch1 {
-    public static void main(String[] args) {
-        //non-decreasing order
-        int arr[] ={2,4,8,9,23,56,77,85};
-        binarySearch(arr,56);
-
-    }
-
-public static void binarySearch(int arr[], int target){
-        int ans =-1;
-        int start = 0;
-        int end = arr.length-1;
-
-
-        while(start<=end){
-            int mid = start + (end-start)/2;
-            if(arr[mid]==target){
-                ans = mid;
-                break;
-            } else if (arr[mid]<target) {
-                start = mid+1;
-            }else{
-                end = mid-1;
-            }
-        }
-        if(ans ==-1){
-            System.out.println("element not found");
-        }
-        else{
-            System.out.println(target+" found at index "+ans);
-        }
-    }
-}
-```
-</details>
-
+### accordion
+### Linear Search
+<!-- 1 -->
 <details>
 <summary>1)Find first occurrence of an element in given array</summary>
 
@@ -95,6 +48,7 @@ public class LinearSearch {
 ```
 </details>
 
+<!-- 2 -->
 <details>
 <summary>2) Find multiple occurrences of an element in given array</summary>
 
@@ -132,6 +86,7 @@ public class LinearSearch2 {
 ```
 </details>
 
+<!-- 3  -->
 <details>
 <summary>3) Find maximum in given array</summary>
 
@@ -161,6 +116,7 @@ public static  void findMax(int arr[]){
 ```
 </details>
 
+<!-- 4 -->
 <details>
 <summary>4) Find minimum in given array</summary>
 
@@ -191,7 +147,60 @@ public static void findMinimum(int arr[]){
 }
 
 ```
+</details>
 
+### Binary Search
+<!-- 1 -->
+<details>
+<summary>1) Find target element in non decreasing Array</summary>
+
+```java
+//code
+public class BinarySearch1 {
+    public static void main(String[] args) {
+        //non-decreasing order
+        int arr[] ={2,4,8,9,23,56,77,85};
+        binarySearch(arr,56);
+
+    }
+
+public static void binarySearch(int arr[], int target){
+        int ans =-1;
+        int start = 0;
+        int end = arr.length-1;
+
+
+        while(start<=end){
+            int mid = start + (end-start)/2;
+            if(arr[mid]==target){
+                ans = mid;
+                break;
+            } else if (arr[mid]<target) {
+                start = mid+1;
+            }else{
+                end = mid-1;
+            }
+        }
+        if(ans ==-1){
+            System.out.println("element not found");
+        }
+        else{
+            System.out.println(target+" found at index "+ans);
+        }
+    }
+}
+```
+</details>
+
+
+
+<details>
+<summary></summary>
+
+```java
+//code
+
+```
 </details>
 
 <details>
@@ -201,17 +210,6 @@ public static void findMinimum(int arr[]){
 //code
 
 ```
-
-</details>
-
-<details>
-<summary></summary>
-
-```java
-//code
-
-```
-
 </details>
 
 ## Author
