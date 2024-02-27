@@ -149,7 +149,7 @@ public static void findMinimum(int arr[]){
 ```
 </details>
 
-### Binary Search
+### binary-search
 <!-- 1 -->
 <details>
 <summary>1) Find target element in non decreasing Array</summary>
