@@ -1,7 +1,7 @@
 
 # Data Structure & Algorithms in Java
 
-This repo contains code files of DSA learnings
+#### Welcome to the comprehensive repository for Data Structures and Algorithms in Java! The code snippets are organized neatly in the README file, written in Markdown for easy readability.
 
 ### Index 
 
@@ -266,7 +266,6 @@ public static void binarySearchOrderAgnostic (int arr[], int target ){
 </details>
 
 ### 🗿Author
-
 - [@aniketpandit07](https://www.github.com/aniketpandit07)
 
 ### 🔗 Links
