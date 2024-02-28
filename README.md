@@ -265,6 +265,269 @@ public static void binarySearchOrderAgnostic (int arr[], int target ){
 ```
 </details>
 
+<!-- 4 -->
+<details>
+<summary>4) Finding the first and last occurrence of a particular element</summary>
+
+```java
+//code
+public class BinarySearch2 {
+    public static void main(String[] args) {
+    int arr[] = {2,3,4,4,4,5,7,9,33,99};
+    firstLastOccurrence(arr,4,true); //it gives first occurrence
+    firstLastOccurrence(arr,4,false); //it gives last occurrence
+
+    }
+    public static void firstLastOccurrence(int arr[], int target, boolean isFirst){
+            int ans =-1;
+            int start = 0;
+            int end = arr.length-1;
+
+
+            while(start<=end){
+                int mid = start + (end-start)/2;
+                if(arr[mid]==target){
+                    ans = mid;
+                    if(isFirst ==true){
+                        end = mid -1;
+                    }
+                    else{
+                        start = mid +1;
+                    }
+                } else if (arr[mid]<target) {
+                    start = mid+1;
+                }else{
+                    end = mid-1;
+                }
+            }
+            if(ans ==-1){
+                System.out.println("element not found");
+            }
+            else{
+                System.out.println(target+" found at index "+ans);
+           }
+    }
+}
+```
+</details>
+
+<!-- 5 -->
+<details>
+<summary>5) Count all the occurrence of an element in the array</summary>
+
+```java
+//code
+public class BinarySearch3 {
+    public static void main(String[] args) {
+        int arr[] = {2,3,4,5,5,5,6,7,7,7,7,7,8};
+        int res[] = new int [2];
+        int first = totalOccurrence(arr,7,true);
+        int last = totalOccurrence(arr,7,false);
+        if(first ==-1){
+            System.out.println("Occurrence is " + 0);
+        }else{
+
+        System.out.println("Occurrence of target is "+ (last - first +1));
+        }
+
+    }
+
+    public static int totalOccurrence(int arr[], int target, boolean isFirst) {
+        int ans = -1;
+        int start = 0;
+        int end = arr.length - 1;
+
+
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+            if (arr[mid] == target) {
+                ans = mid;
+                if (isFirst == true) {
+                    end = mid - 1;
+                } else {
+                    start = mid + 1;
+                }
+            } else if (arr[mid] < target) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
+        if (ans == -1) {
+            System.out.println("element not found");
+        } else {
+            System.out.println(target + " found at index " + ans);
+        }
+
+    return ans;
+    }
+	}
+}
+```
+</details>
+
+<!-- 6 -->
+<details>
+<summary>6) Find the FLOOR value of target element if target is not present</summary>
+
+```java
+//code
+public class BinarySearch4 {
+    public static void main(String[] args) {
+
+        int arr[] = {4,4,5,6,8,9,15,15,17,18,19,40};
+        binarySearchFloor(arr, 20);
+        
+    }
+
+public static void binarySearchFloor(int arr[], int target){
+        int ans =-1;
+        int start = 0;
+        int end = arr.length-1;
+
+
+        while(start<=end){
+            int mid = start + (end-start)/2;
+            if(arr[mid]==target){
+                ans = arr[mid];
+                break;
+            } else if (arr[mid]<target) {
+                start = mid+1;
+                ans = arr[mid];  //if we write ans = mid then it returns the index of that value
+            }else{
+                end = mid-1;
+            }
+        }
+        if(ans ==-1){
+            System.out.println("element not found");
+        }
+        else{
+            System.out.println(target+" floor value present is  "+ans);
+        }
+    }
+}
+```
+</details>
+
+<!-- 7 -->
+<details>
+<summary>7) Find the CEIL value of target element if target is not present</summary>
+
+```java
+//code
+public class BinarySearch4 {
+    public static void main(String[] args) {
+
+        int arr[] = {4,4,5,6,8,9,15,15,17,18,19,40};
+        binarySearchCeil(arr,3);
+        
+    }
+
+public static void binarySearchCeil(int arr[], int target){
+        int ans =-1;
+        int start = 0;
+        int end = arr.length-1;
+
+
+        while(start<=end){
+            int mid = start + (end-start)/2;
+            if(arr[mid]==target){
+                ans = arr[mid];
+                break;
+            } else if (arr[mid]<target) {
+                start = mid+1;
+
+            }else{
+                end = mid-1;
+                ans = arr[mid];  //if we write ans = mid then it returns the index of that value
+            }
+        }
+        if(ans ==-1){
+            System.out.println("element not found");
+        }
+        else{
+            System.out.println(target+" ceil value present is  "+ans);
+        }
+    }
+
+}
+```
+</details>
+
+<!-- 8 -->
+<details>
+<summary>8) Find minimum element in bitonic array</summary>
+
+```java
+//code
+public static void main(String[] args) {
+    int arr []= {2,5,7,11,13,16,10,8,6,2,1};
+        findMinElementInBitonicArray(arr);
+    }
+
+public static void findMinElementInBitonicArray(int arr[]){
+        int firstIdx = arr[0];
+        int lastIdx = arr[arr.length-1];
+        if(arr.length ==0){
+            System.out.println("array is empty");
+        } else if (arr.length == 1) {
+            System.out.println("Min element is "+ arr[0]);
+        }else{
+//            int result = (arr[0]<arr[arr.length-1])?arr[0]:arr[arr.length-1];
+            int result = (firstIdx<lastIdx)?firstIdx:lastIdx;
+            System.out.println("min element is"+ result);
+        }
+    }
+}
+```
+</details>
+
+<!-- 9 -->
+<details>
+<summary>9) Find peak element in bitonic array</summary>
+
+```java
+//code
+public class BitonicArray {
+    public static void main(String[] args) {
+    int arr []= {2,5,7,11,13,16,10,8,6,2,1};
+        int index = findPeakInBitonicArray(arr);
+        if(index ==-1){
+            System.out.println("Element not present");
+        }
+        else{
+            System.out.println("Found "+arr[index]+" at "+index);
+        }
+    }
+
+public static int findPeakInBitonicArray(int []arr){
+        int start = 0;
+        int end = arr.length-1;
+        while(start<=end){
+            int mid = start + (end-start)/2;
+            int next = (mid+1)%arr.length;
+            int prev = (mid-1+arr.length)%arr.length;
+
+
+            //you are in bitonic array
+            if(arr[mid]> arr[prev] && arr[mid]>arr[next]){
+                return mid;
+            }
+            //you are in increasing array
+            else if(arr[mid]> arr[prev]){
+                start = mid+1;
+            }
+            //you are in decreasing array
+            else{
+                end = mid -1;
+            }
+        }
+        return -1;
+    }
+}
+```
+</details>
+
 ### 🗿Author
 - [@aniketpandit07](https://www.github.com/aniketpandit07)
 
